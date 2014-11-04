@@ -30,22 +30,18 @@ public class CategoryViewController : UITableViewController, IAdMarvelDelegate
         return "[your site ID]";
     }
 
-    public RectangleF AdMarvelViewFrame()
-    {
-        return new RectangleF(0.0f, 0.0f, UIScreen.MainScreen.Bounds.Width, 50.0f);
-    }
-
-
     public UIViewController ApplicationUIViewController()
     {
         return this;
     }
 
+    [Export("getAdSucceeded")]
     public void GetAdSucceeded()
     {
         //handle Ad Succeeded
     }
 
+    [Export("getAdFailed")]
     public void GetAdFailed()
     {
         //handle Show Another Ad
